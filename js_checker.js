@@ -1,20 +1,27 @@
+/**
+ *@author hexinglun@gmail.com
+ */
 (function() {
+	/************************************内部变量、对象**************************************/
+	var	_emailRegExp     = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/,
+		_urlRegExp       = /^(http|https):\/\/.*$/;
+	/*****************************************end*******************************************/
+	
 	var __checker = {
 		/**
 		 * 检验是否为数字
 		 */
-		isNumeric : function(num) {
+		isValidNumeric : function(num) {
 			if (isFinite(num)) {
 				return !isNaN(parseInt(num));
 			}
 			return false;
 		} ,
 		/**
-		 * 检查url的合法性
+		 * url是否合法性
 		 */
-		checkUrl : function(str) {
-			var urlReg = /^(http|https):\/\/.*$/;
-			return urlReg.test(str);
+		isValidUrl : function(url) {
+			return _urlRegExp.test(url);
 		} ,
 		// 检验IP
 		isValidIP : function(ip) {
@@ -25,7 +32,7 @@
 				}
 				for ( var index = 0; index < nums.length; index++) {
 					var num = nums[index];
-					if (this.isNumeric(num)) {
+					if (this.isValidNumeric(num)) {
 						num = parseInt(num);
 						if (num > 255 || num < 0) {
 							return false;
@@ -38,6 +45,9 @@
 				return false;
 			}
 			return true;
+		},
+		isValidEmail : function(email){
+			return _emailRegExp.test(email);
 		}
 	};
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<script type="text/javascript" src="js_checker.js"></script>
+	<script type="text/javascript">
+		var checkEmail = function(){
+			var email = document.getElementById("email").value;
+			alert(checker.isValidEmail(email));
+		};
+		var checkUrl = function(){
+			var url = document.getElementById("url").value;
+			alert(checker.isValidUrl(url));
+		};
+		var checkIP = function(){
+			var ip = document.getElementById("ip").value;
+			alert(checker.isValidIP(ip));
+		};
+		var checkNumeric = function(){
+			var num = document.getElementById("numeric").value;
+			alert(checker.isValidNumeric(num));
+		};
+	</script>
+</head>
+<body>
+	<div>
+		<div>URL:<input type="text" id="url" /><button onclick="checkUrl()">测试</button></div>
+		<div>Email: <input type="text" name="email" id="email"> <button onclick="checkEmail()">测试</button> </div>
+		<div>IP:<input type="text" id="ip"> <button onclick="checkIP()">测试</button></div>
+		<div>Numeric:<input type="text" id="numeric" /> <button onclick="checkNumeric()">测试</button></div>
+	</div>
+</body>
+</html>
