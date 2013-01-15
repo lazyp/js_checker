@@ -3,5 +3,8 @@
 	如：url、ip、数字等
 </pre>
 ```javascript
-	 checker.checkUrl(url);//检测url合法性
+	 checker.isValidUrl(url);//检测url合法性
+	 checker.isValidIP(ip);//检测ip合法性
+	 checker.isValidNumeric(num);//检测数字合法性
+	 checker.isValidEmail(email);//检测email合法性
 ```
