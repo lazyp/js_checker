@@ -20,6 +20,10 @@
 			var num = document.getElementById("numeric").value;
 			alert(checker.isValidNumeric(num));
 		};
+		var checkMobile = function(){
+			var mobile = document.getElementById("mobile").value;
+			alert(checker.isMobile(mobile));
+                };
 	</script>
 </head>
 <body>
@@ -28,6 +32,7 @@
 		<div>Email: <input type="text" name="email" id="email"> <button onclick="checkEmail()">测试</button> </div>
 		<div>IP:<input type="text" id="ip"> <button onclick="checkIP()">测试</button></div>
 		<div>Numeric:<input type="text" id="numeric" /> <button onclick="checkNumeric()">测试</button></div>
+		<div>mobile: <input type="text" id="mobile"/> <button onclick="checkMobile()">测试</button> </div>
 	</div>
 </body>
 </html>

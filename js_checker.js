@@ -17,6 +17,16 @@
 			}
 			return false;
 		} ,
+	    /**
+             *是否为手机号码
+             */
+	    isMobile : function(tel){
+		if(__checker.isValidNumeric(tel) && tel.length == 11){
+		    return true;
+		}else{
+		    return false;
+		}
+	    },
 		/**
 		 * url是否合法性
 		 */
