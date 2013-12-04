@@ -7,4 +7,5 @@
 	 checker.isValidIP(ip);//检测ip合法性
 	 checker.isValidNumeric(num);//检测数字合法性
 	 checker.isValidEmail(email);//检测email合法性
+	 checker.isMobile(tel);//检测是否为手机号码
 ```
